@@ -23,6 +23,8 @@ Add following in pom.xml
 ```
 
 * Use `io.awspring.cloud.sqs.annotation.SqsListener` to listen the messages instead of 
-`import io.awspring.cloud.messaging.listener.annotation.SqsListener`
+`io.awspring.cloud.messaging.listener.annotation.SqsListener`
 * If "Visibility timeout" of SQS is less than listener's processing time then message needs to be deleted explicitly from the queue,
     otherwise same message could be processed multiple times.
+
+Check [reference](https://docs.awspring.io/spring-cloud-aws/docs/3.0.0/reference/html/index.html#using-amazon-web-services) for more details.
