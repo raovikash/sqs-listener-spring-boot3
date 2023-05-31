@@ -2,7 +2,6 @@ package com.example.listener.sqslistener;
 
 import io.awspring.cloud.sqs.annotation.SqsListener;
 //import io.awspring.cloud.messaging.listener.annotation.SqsListener;
-import io.awspring.cloud.messaging.listener.SqsMessageDeletionPolicy;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +10,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Slf4j
-public class SQSEmmitor {
+public class MySQSListener {
 
 //    @SqsListener(value = "${sqs.url}", deletionPolicy = SqsMessageDeletionPolicy.ON_SUCCESS)
     @SqsListener(value = "${sqs.url}")
